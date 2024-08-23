@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "a1ed80d1-8785-401a-8069-4d334eb66e5e",
+		"name": "BakkalDefteri",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28554956"
+	},
+	"item": [
+		{
+			"name": "Kullanıcı Ekle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"Ad\": \"Necdet\", \"Soyad\": \"UYGUR\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/kullanici",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"kullanici"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kullanıcıları Getir",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"Ad\": \"Test 2\", \"Soyad\": \"Test 2\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/kullanici",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"kullanici"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kullanıcı Güncelle",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"ID\": 3, \"Ad\": \"Necdet\", \"Soyad\": \"UYGUR\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/kullanici",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"kullanici"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ürün Ekle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"Ad\": \"Tuz\", \"Barkod\": \"89000004\", \"Fiyat\": 25 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/urun",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"urun"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ürünleri Getir",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/urun",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"urun"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ürün Güncelle",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"ID\": 2, \"Ad\": \"Süt\", \"Barkod\": \"89000002\", \"Fiyat\": 35 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/urun",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"urun"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Defter Kaydı Ekle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"KullaniciID\": 3, \"UrunID\": 3, \"Adet\": 5 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/defter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"defter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Defter Kayıtlarını Getir",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/defter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"defter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Defter Kaydını Güncelle",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ID\": 4,\n    \"KullaniciID\": 3,\n    \"UrunID\": 3,\n    \"Adet\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/defter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"defter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Defter Borç Ödeme Kaydı",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"KullaniciID\": 3, \"Tutar\": 95 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/defter/odeme",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"defter",
+						"odeme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kullanıcı Borcunu Getir",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/defter/kullanici/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"defter",
+						"kullanici",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
