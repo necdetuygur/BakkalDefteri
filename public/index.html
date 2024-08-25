@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BakkalDefteri</title>
+    <script src="function.js"></script>
+    <script src="script.js"></script>
+    <style>
+      *,
+      * *,
+      * * * {
+        box-sizing: border-box;
+      }
+      body,
+      table {
+        font: 13px arial;
+      }
+      table {
+        width: 100%;
+      }
+      td {
+        border: 1px solid #888;
+      }
+      .flex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+      legend {
+        width: 100%;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="button" value="Defter" onclick="router('defter')" />
+      <input type="button" value="Kişiler" onclick="router('kullanici')" />
+      <input type="button" value="Ürünler" onclick="router('urun')" />
+    </div>
+    <div id="router">
+      <div id="route-defter">
+        <fieldset>
+          <legend>
+            <div class="flex">
+              <div>Defter</div>
+              <div
+                style="
+                  border-bottom: 1px solid #000;
+                  width: 100%;
+                  position: relative;
+                  margin: 0 0.25rem 0.75rem 0.25rem;
+                "
+              >
+                &nbsp;
+              </div>
+              <div>
+                <input type="button" value="Yeni Ekle" />
+              </div>
+            </div>
+          </legend>
+          <div id="defter"></div>
+        </fieldset>
+      </div>
+      <div id="route-kullanici">
+        <fieldset>
+          <legend>
+            <div class="flex">
+              <div>Kişiler</div>
+              <div
+                style="
+                  border-bottom: 1px solid #000;
+                  width: 100%;
+                  position: relative;
+                  margin: 0 0.25rem 0.75rem 0.25rem;
+                "
+              >
+                &nbsp;
+              </div>
+              <div>
+                <input
+                  type="button"
+                  value="Yeni Ekle"
+                  onclick="kullaniciEklePrompt()"
+                />
+              </div>
+            </div>
+          </legend>
+          <div id="kullanicilar"></div>
+        </fieldset>
+      </div>
+      <div id="route-urun">
+        <fieldset>
+          <legend>
+            <div class="flex">
+              <div>Ürünler</div>
+              <div
+                style="
+                  border-bottom: 1px solid #000;
+                  width: 100%;
+                  position: relative;
+                  margin: 0 0.25rem 0.75rem 0.25rem;
+                "
+              >
+                &nbsp;
+              </div>
+              <div>
+                <input
+                  type="button"
+                  value="Yeni Ekle"
+                  onclick="urunEklePrompt()"
+                />
+              </div>
+            </div>
+          </legend>
+          <div id="urunler"></div>
+        </fieldset>
+      </div>
+    </div>
+  </body>
+</html>
